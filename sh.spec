@@ -34,9 +34,9 @@ if [ ! -f /etc/shells ]; then
 	echo "/bin/sh" >> /etc/shells
 else
 	while read SHNAME; do
-	        if [ "$SHNAME" = "/bin/sh" ]; then
-        	        HAS_SH=1
-	        fi
+		if [ "$SHNAME" = "/bin/sh" ]; then
+			HAS_SH=1
+		fi
 	done < /etc/shells
 	[ -n "$HAS_SH" ] || echo "/bin/sh" >> /etc/shells
 fi
