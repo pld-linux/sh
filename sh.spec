@@ -1,4 +1,5 @@
 Summary:	Shell
+Summary(pl):	Pow³oka
 Name:		sh
 Version:	1.0
 Release:	1
