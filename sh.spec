@@ -5,8 +5,9 @@ Version:	1.0
 Release:	1
 License:	GPL
 Group:		Applications/Shells
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Requires(preun):	fileutils
 BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		interpreter		ksh
 
@@ -28,6 +29,7 @@ ln -sf %{interpreter} $RPM_BUILD_ROOT/bin/sh
 rm -rf $RPM_BUILD_ROOT
 
 %post
+umask 022
 if [ ! -f /etc/shells ]; then
 	echo "/bin/sh" >> /etc/shells
 else
@@ -40,6 +42,7 @@ else
 fi
 
 %preun
+umask 022
 if [ "$1" = "0" ]; then
 	while read SHNAME; do
 		[ "$SHNAME" = "/bin/sh" ] || echo "$SHNAME"
