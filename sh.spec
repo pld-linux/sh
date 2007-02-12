@@ -1,5 +1,5 @@
 Summary:	Shell
-Summary(pl.UTF-8):   Powłoka
+Summary(pl.UTF-8):	Powłoka
 Name:		sh
 Version:	1.0
 Release:	1
