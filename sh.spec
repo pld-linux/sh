@@ -1,5 +1,5 @@
 Summary:	Shell
-Summary(pl):	Pow³oka
+Summary(pl.UTF-8):   PowÅ‚oka
 Name:		sh
 Version:	1.0
 Release:	1
@@ -14,8 +14,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This dummy package provides /bin/sh.
 
-%description -l pl
-Ten niby-pakiet udostêpnia /bin/sh.
+%description -l pl.UTF-8
+Ten niby-pakiet udostÄ™pnia /bin/sh.
 
 %prep
 
